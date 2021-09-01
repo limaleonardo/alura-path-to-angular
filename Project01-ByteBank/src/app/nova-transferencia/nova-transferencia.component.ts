@@ -10,11 +10,10 @@ export class NovaTransferenciaComponent{
 
     @Output() aoTransferir = new EventEmitter<any>();
     
-    valor: number = 0;
-    destino: number = 0;
+    valor: number | any;
+    destino: number | any;
     
     transferir() {
-        console.log('FOI');
         this.aoTransferir.emit({ valor: this.valor, destino: this.destino });
 
         this.limparCampos();
