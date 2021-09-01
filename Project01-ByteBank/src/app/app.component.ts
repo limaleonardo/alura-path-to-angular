@@ -8,19 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Project01-ByteBank';
 
-  destino: number | undefined;
-  valor: number | undefined;
+  transferencia: {destino: number, valor: number} | undefined;
 
   transferir($event: { destino: number, valor: number }){
-    console.log($event);
-    this.destino = $event.destino;
-    this.valor = $event.valor;
-
-    this.limparCampos();
+    this.transferencia = $event;
   }
 
-  limparCampos() {
-    this.valor = 0;
-    this.destino = 0;
-  }
 }
