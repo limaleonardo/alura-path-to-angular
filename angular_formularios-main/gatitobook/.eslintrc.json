@@ -10,7 +10,7 @@
       ],
       "parserOptions": {
         "project": [
-          "tsconfig.json"
+          "./gatitobook/tsconfig.json"
         ],
         "createDefaultProgram": true
       },
